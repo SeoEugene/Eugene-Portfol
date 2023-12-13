@@ -1,0 +1,88 @@
+.effert__wrap {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+}
+
+.effert__wrap .effert:nth-child(1) {
+    margin-top: 100px;
+}
+
+.effert__wrap .effert {
+    width: 80%;
+    /* height: 512px; */
+    padding: 80px;
+    display: flex;
+    margin-bottom: 162px;
+    font-family: 'Roboto Slab';
+    box-sizing: border-box;
+    background-color: #F2F0E7;
+    border: 1px solid #333;
+    /* border-radius: 30px; */
+}
+
+.effert__img {
+    width: calc(50% - 50px);
+    height: 350px;
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+
+}
+
+.effert__text {
+    width: 50%;
+    height: 350px;
+
+}
+
+.effert h3 {
+    font-size: 30px;
+    margin-bottom: 30px;
+}
+
+
+.effert ul li {
+    line-height: 2;
+}
+
+
+.effert ul>li>ul>li {
+    list-style: disc;
+}
+
+
+.effert div:nth-child(2) {
+    padding-left: 50px;
+}
+
+
+
+.effert1__img {
+    background-image: url(../img/effert1.png);
+}
+
+.effert2__img {
+    background-image: url(../img/effert2.png);
+}
+
+.effert3__img {
+    background-image: url(../img/effert3.png);
+}
+
+.effert4__img {
+    background-image: url(../img/effert4.png);
+}
+
+.effert__btn {
+    width: 220px;
+    height: 55px;
+    padding: 15px 30px;
+    border: 1px solid #000;
+    border-radius: 30px;
+    display: flex;
+    justify-content: center;
+    margin: 0 auto;
+    margin-top: 50px;
+}

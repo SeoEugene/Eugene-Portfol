@@ -1,0 +1,274 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Eugene</title>
+    <style>
+        .top,
+        .left,
+        .content {
+            opacity: 0;
+        }
+
+        .top.fade-in,
+        .left.fade-in {
+            transition: opacity 1s ease;
+        }
+
+        .top.fade-out,
+        .left.fade-out {
+            transition: opacity 3s ease;
+        }
+
+        .content.fade-in {
+            transition: opacity 3s ease;
+        }
+
+        .content.fade-out {
+            transition: opacity 1s ease;
+        }
+
+        .fade-in {
+            opacity: 1;
+        }
+
+        .fade-out {
+            opacity: 0;
+        }
+
+        /* @keyframes fadeIn {
+            from {
+                opacity: 0;
+            }
+
+            to {
+                opacity: 1;
+            }
+        } */
+    </style>
+    <link rel="stylesheet" href="assets/css/style.css">
+</head>
+
+<body>
+
+    <div id="section">
+        <div class="top">
+            <div class="logo">Portfolio ASTRO PHOTOGRAPHY</div>
+            <div class="contact"><a href="#">contact</a></div>
+        </div>
+        <div class="left">
+            <div class="title home"><a href="/">EuGene<span>M</span></a></div>
+            <nav class="nav">
+                <ul>
+                    <li class="home"><a href="/">1. Home</a></li>
+                    <li><a href="html/portfoliolist.html">2. PortFolio</a>
+                        <ul>
+                            <li>a. Find English</li>
+                            <li>b. CinematicTable</li>
+                            <li>c. Trend Device</li>
+                            <li>d. Recommend Book</li>
+                            <li>e. Diary with Chat GPT</li>
+                            <li>f. Rolling Paper with Friends</li>
+                            <li>g. Shaking carrots</li>
+                        </ul>
+                    </li>
+                    <li class="effert"><a href="html/effert.html">3. My Effect</a></li>
+                    <li class="about"><a href="html/about.html">4. About Me</a>
+                        <ul>
+                            <li>a. about me</li>
+                            <li>b. my skill</li>
+                            <li>c. my plan</li>
+                        </ul>
+                    </li>
+                    <li class="contact"><a href="html/contact.html">5. Contact Me</a></li>
+                </ul>
+            </nav>
+        </div>
+        <div class="content">
+            <div class="cont-header">
+                <h2><span></span>home</h2>
+            </div>
+            <div class="cont-conts">
+                <div class="circle1">
+                    <div class="circle1-1">
+                        <div class="circle1-1-1"></div>
+                    </div>
+                </div>
+                <div class="circle2">
+                    <div class="circle2-1">
+                        <div class="circle2-1-1">
+                            <div id="canvas"></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="cont-footer"></div>
+        </div>
+    </div>
+    <!-- //section -->
+
+    <script>
+        document.addEventListener("DOMContentLoaded", () => {
+            document.querySelector(".top").classList.remove("fade-out");
+            document.querySelector(".left").classList.remove("fade-out");
+            document.querySelector(".content").classList.remove("fade-out");
+            document.querySelector(".top").classList.add("fade-in");
+            document.querySelector(".left").classList.add("fade-in");
+            document.querySelector(".content").classList.add("fade-in");
+        })
+
+        document.querySelector(".title").addEventListener("click", () => {
+            event.preventDefault();
+
+            document.querySelector(".top").classList.add("fade-out");
+            document.querySelector(".left").classList.add("fade-out");
+            document.querySelector(".content").classList.add("fade-out");
+
+            setTimeout(function () {
+                window.location.href = "/";
+            }, 3000);
+
+        })
+
+        let navItems = document.querySelectorAll(".nav > ul > li");
+
+        navItems.forEach(function (navItem) {
+            navItem.addEventListener("click", function (event) {
+                event.preventDefault();
+
+                let linkElement = navItem.querySelector("a");
+
+                if (linkElement) {
+                    document.querySelector(".top").classList.add("fade-out");
+                    document.querySelector(".left").classList.add("fade-out");
+                    document.querySelector(".content").classList.add("fade-out");
+
+                    setTimeout(function () {
+                        window.location.href = linkElement.getAttribute("href");
+                    }, 3000);
+                }
+            });
+        });
+    </script>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/89/three.min.js"></script>
+    <script id="vertexShader" type="x-shader/x-vertex">
+        void main() {
+            gl_Position = vec4( position, 1.0 );
+        }
+    </script>
+
+    <script id="fragmentShader" type="x-shader/x-fragment">
+        #ifdef GL_ES
+            precision mediump float;
+            #endif
+
+            uniform float time;
+            uniform vec2 resolution;
+
+            float noise(vec2 p) {
+                p=(p);
+                return fract(sin(p.x*45.11+p.y*97.23)*878.73+733.17)*2.-1.0;
+            }      
+        
+            float map(vec2 p) {
+                return length(p) - 0.2;
+            }
+        
+            void main() {
+                vec2 uv = (gl_FragCoord.xy * 2.0 - resolution.xy) / min(resolution.x, resolution.y);
+                vec3 col;
+                vec3 color = vec3(1.,1.,1.);
+            
+            for(float j = 0.0; j < 4.0; j++){
+                for(float i = 1.; i < 8.0; i++){
+                    uv.x += (1.0 * (
+                    0.2/(i+j) * sin(i * atan(time)*2.*uv.y + (time*0.1) + i*j) 
+                ));
+                uv.y += (1.0 *(
+                    1.0/(i+j) * cos(i*0.6*uv.x + (time*0.05) + i*j) 
+                ));
+                }
+                uv.x += noise(sin(uv+time))*0.01;
+                uv.y += noise(cos(uv+time))*0.2;
+                col[int(j)] = clamp((abs(uv.x+uv.y)), 0.2, 1.0);
+            }
+        
+            vec3 bg = vec3(0.9,0.2,0.8);
+                color = mix(col, bg, smoothstep(0.0,abs(sin(time*0.05))*3.0,map(uv))
+            );
+        
+            gl_FragColor = vec4(color, 1.);
+        }
+    </script>
+    <script>
+        var container;
+        var camera, scene, renderer;
+        var uniforms;
+
+        init();
+        animate();
+
+        function init() {
+            container = document.getElementById('canvas');
+
+            camera = new THREE.Camera();
+            camera.position.z = 1;
+            scene = new THREE.Scene();
+
+            var geometry = new THREE.PlaneBufferGeometry(2, 2);
+
+            uniforms = {
+                time: {
+                    type: "f",
+                    value: 1.0
+                },
+                resolution: {
+                    type: "v2",
+                    value: new THREE.Vector2()
+                }
+            };
+
+            var material = new THREE.ShaderMaterial({
+                uniforms: uniforms,
+                vertexShader: document.getElementById('vertexShader').textContent,
+                fragmentShader: document.getElementById('fragmentShader').textContent
+            });
+
+            var mesh = new THREE.Mesh(geometry, material);
+            scene.add(mesh);
+
+            renderer = new THREE.WebGLRenderer({
+                alpha: true
+            });
+            renderer.setPixelRatio(window.devicePixelRatio);
+
+            container.appendChild(renderer.domElement);
+
+            onWindowResize();
+            window.addEventListener('resize', onWindowResize, false);
+        }
+
+        function onWindowResize(event) {
+            renderer.setSize(window.innerWidth, window.innerHeight);
+            uniforms.resolution.value.x = renderer.domElement.width;
+            uniforms.resolution.value.y = renderer.domElement.height;
+        }
+
+        function animate() {
+            requestAnimationFrame(animate);
+            render();
+        }
+
+        function render() {
+            uniforms.time.value += 0.05;
+            renderer.render(scene, camera);
+        }
+    </script>
+
+
+</body>
+
+</html>
