@@ -1,13 +1,9 @@
 .effert__wrap {
     display: flex;
-    flex-wrap: wrap;
     justify-content: center;
     align-items: center;
 }
 
-.effert__wrap .effert:nth-child(1) {
-    margin-top: 100px;
-}
 
 .effert__wrap .effert {
     width: 80%;
