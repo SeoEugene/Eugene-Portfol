@@ -37,19 +37,6 @@
         .fade-out {
             opacity: 0;
         }
-
-
-
-        .list__wrap {
-            opacity: 0;
-            transform: translateY(20px);
-        }
-
-        .list__wrap.active {
-            transition: opacity 5s ease, transform 5s ease;
-            opacity: 1;
-            transform: translateY(0);
-        }
     </style>
     <link rel="stylesheet" href="../assets/css/style.css">
 </head>
@@ -91,110 +78,24 @@
         </div>
         <div class="content">
             <div class="cont-header">
-                <h2><span></span>PortFolio</h2>
+                <h2><span></span>about</h2>
             </div>
 
-
-            <div class="list__wrap">
-                <div class="page" id="page1">
-                    <div class="list one">
-                        <div class="number">I.</div>
-                        <div class="name">Find English</div>
-                        <div class="pro">Personal Project</div>
-                        <div class="lan">YoutubeAPI + React.js</div>
-                        <div class="img">
-                            <a href="portfoliomore.html"></a>
+            <div class="about__wrap">
+                <div class="page">
+                    <div id="about1" class="about">
+                        <div class="text">
+                            <div class="text1"> Hello there,</div>
+                            <div class="text2"> I'm Eugene,</div>
+                            <div class="text3"> and you can also call me Joy</div>
+                            <div class="text4"> if you prefer</div>
                         </div>
+                        <div class="image"></div>
                     </div>
-                    <!-- list -->
 
-                    <div class="list two">
-                        <div class="number">II.</div>
-                        <div class="name">CinematicTable</div>
-                        <div class="pro">Personal Project</div>
-                        <div class="lan">The Movie Database (TMDB) API + Spoonacular API + React.js</div>
-                        <div class="img">
-                            <a href="#"></a>
-                        </div>
-                    </div>
-                    <!-- list -->
-
-                    <div class="list three">
-                        <div class="number">III.</div>
-                        <div class="name">Trend Device</div>
-                        <div class="pro">Team Project</div>
-                        <div class="lan">HTML/CSS/javascript + PHP</div>
-                        <div class="img">
-                            <a href="#"></a>
-                        </div>
-                    </div>
-                    <!-- list -->
-
-                    <div class="list four">
-                        <div class="number">IV.</div>
-                        <div class="name">English Diary</div>
-                        <div class="pro">Team Project</div>
-                        <div class="lan">Chat GPT API + </div>
-                        <div class="img">
-                            <a href="#"></a>
-                        </div>
-                    </div>
-                    <!-- list -->
-                    <div class="next" onclick="nextPage()"></div>
                 </div>
-
-                <div class="page" id="page2">
-                    <div class="list five">
-                        <div class="number">V.</div>
-                        <div class="name">CinematicTable</div>
-                        <div class="pro">Personal Project</div>
-                        <div class="lan">The Movie Database (TMDB) API + Spoonacular API + React.js</div>
-                        <div>
-                            <div class="img"></div>
-                        </div>
-                    </div>
-                    <!-- list -->
-
-                    <div class="list six">
-                        <div class="number">VI.</div>
-                        <div class="name">CinematicTable</div>
-                        <div class="pro">Personal Project</div>
-                        <div class="lan">The Movie Database (TMDB) API + Spoonacular API + React.js</div>
-                        <div>
-                            <div class="img"></div>
-                        </div>
-                    </div>
-                    <!-- list -->
-
-                    <div class="list seven">
-                        <div class="number">VII.</div>
-                        <div class="name">CinematicTable</div>
-                        <div class="pro">Personal Project</div>
-                        <div class="lan">The Movie Database (TMDB) API + Spoonacular API + React.js</div>
-                        <div>
-                            <div class="img"></div>
-                        </div>
-                    </div>
-                    <!-- list -->
-
-                    <div class="list eight">
-                        <div class="number">VIII.</div>
-                        <div class="name">CinematicTable</div>
-                        <div class="pro">Personal Project</div>
-                        <div class="lan">The Movie Database (TMDB) API + Spoonacular API + React.js</div>
-                        <div>
-                            <div class="img"></div>
-                        </div>
-                    </div>
-                    <!-- list -->
-
-
-                    <div class="prev" onclick="prevPage()"></div>
-                </div>
-
-
             </div>
-            <!-- list__wrap -->
+            <!-- about__wrap -->
 
 
             <div class="cont-footer"></div>
@@ -254,36 +155,6 @@
                 }
             });
         });
-
-        let currentPage = 1;
-        function nextPage() {
-            const list = document.querySelector(".list__wrap");
-            const pageWidth = document.querySelector('.page').offsetWidth;
-            const totalPages = document.querySelectorAll('.page').length;
-            if (currentPage < totalPages) {
-                list.style.transform = `translateX(-${currentPage * pageWidth}px)`;
-                currentPage++;
-            } else {
-                currentPage = 1;
-                list.style.transform = `translateX(0)`;
-            }
-        }
-        function prevPage() {
-            const list = document.querySelector(".list__wrap");
-            const pageWidth = document.querySelector('.page').offsetWidth;
-            const totalPages = document.querySelectorAll('.page').length;
-            if (currentPage < totalPages) {
-                list.style.transform = `translateX(0)`;
-                currentPage++;
-            } else {
-                currentPage = 1;
-                list.style.transform = `translateX(0)`;
-            }
-        }
-
-
-
-
     </script>
 
 
