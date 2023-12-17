@@ -91,7 +91,7 @@
 
 #section .content {
     width: calc(100% - 300px);
-    height: 100vh;
+    height: calc(100vh - 70px);
 }
 
 #section .content .cont-header {
@@ -125,7 +125,7 @@
     display: flex;
     flex-direction: column;
     justify-content: space-between;
-    height: calc(100% - 70px);
+    /* height: calc(100% - 70px); */
     background:
         radial-gradient(black 3px, transparent 4px),
         radial-gradient(black 3px, transparent 4px),
@@ -213,12 +213,12 @@
     overflow: hidden;
 }
 
-#section .content .cont-footer {
+/* #section .content .cont-footer {
     height: 100px;
     border-top: 1px solid #000;
     background-color: #F2F0E7;
 
-}
+} */
 
 @media (max-width: 1000px) {
     #section .left {

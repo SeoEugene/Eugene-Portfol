@@ -1,26 +1,89 @@
 .effert__wrap {
     width: 400%;
+    height: 100%;
     display: flex;
     transition: transform 5s ease;
 }
 
-.page>section {
+.effert__wrap .page {
+    width: 100%;
+    height: 100%;
+    position: relative;
+}
+
+.effert__wrap .table {
+    width: 100%;
+}
+
+.effert__wrap .table>ul {
+    margin-top: 30px;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.effert__wrap .table>ul>li {
+    padding: 0 20px;
+    font-size: 30px;
+    padding: 0 20px;
+
+}
+
+.effert__wrap .page>section {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
     width: 80%;
     height: 500px;
     border: 1px solid #333;
     background-color: #f3f0e7;
     margin: 23px 0;
+    display: flex;
+    /* flex-wrap: wrap; */
+    justify-content: center;
+    align-items: center;
+    box-sizing: border-box;
 }
 
 
 .effert__img {
-    /* width: calc(50% - 50px); */
     width: 50%;
     height: 350px;
     background-position: center;
     background-size: cover;
     background-repeat: no-repeat;
+    /* padding: 20px; */
+    margin: 0 20px;
+    box-sizing: border-box;
 
+}
+
+.text__box {
+    width: 50%;
+    display: block;
+    text-align: center;
+}
+
+.effert__text {
+    width: 100%;
+    padding: 20px;
+    box-sizing: border-box;
+    text-align: left;
+}
+
+.effert__text h3 {
+    font-weight: 600;
+    margin-bottom: 10px;
+}
+
+.text__box .effert__btn {
+    padding: 15px 30px;
+    display: inline-block;
+    border: 1px solid #333;
+    border-radius: 30px;
+    cursor: pointer;
 }
 
 .effert1__img {

@@ -38,95 +38,6 @@
         .fade-out {
             opacity: 0;
         }
-
-
-        /* row */
-        .effert__wrap {
-            width: 400%;
-            display: flex;
-            transition: transform 5s ease;
-
-        }
-
-        .page {
-            flex: 1;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            position: relative;
-        }
-
-        .page>section {
-            width: 80%;
-            height: 500px;
-            border: 1px solid #333;
-            background-color: #f3f0e7;
-        }
-
-
-        .effert__img {
-            /* width: calc(50% - 50px); */
-            width: 50%;
-            height: 350px;
-            background-position: center;
-            background-size: cover;
-            background-repeat: no-repeat;
-
-        }
-
-        .effert1__img {
-            background-image: url(../img/effert1.png);
-        }
-
-        .effert2__img {
-            background-image: url(../img/effert2.png);
-        }
-
-        .effert3__img {
-            background-image: url(../img/effert3.png);
-        }
-
-        .effert4__img {
-            background-image: url(../img/effert4.png);
-        }
-
-        .over {
-            transition: opacity 3s ease;
-        }
-
-        .none {
-            opacity: 0;
-            pointer-events: none;
-        }
-
-        .nextover {
-            width: 100px;
-            height: 50px;
-            background-image: url(../assets/img/next.gif);
-            background-position: center;
-            background-size: contain;
-            background-repeat: no-repeat;
-            position: absolute;
-            top: 50%;
-            right: 20px;
-            transform: (translate(-50%, -47%));
-            cursor: pointer;
-        }
-
-        .prevover {
-            width: 100px;
-            height: 50px;
-            background-image: url(../assets/img/next.gif);
-            background-position: center;
-            background-size: contain;
-            background-repeat: no-repeat;
-            position: absolute;
-            top: 50%;
-            left: 20px;
-            transform: (translate(-50%, -47%));
-            cursor: pointer;
-            transform: scaleX(-1);
-        }
     </style>
     <link rel="stylesheet" href="../assets/css/style.css">
 </head>
@@ -172,18 +83,29 @@
             </div>
 
             <div class="effert__wrap">
-                <div class="page">
+                <div class="page" id="page1">
+                    <div class="table">
+                        <ul>
+                            <li><a href="#">I</a></li>
+                            <li><a href="#">II</a></li>
+                            <li><a href="#">III</a></li>
+                            <li><a href="#">IV</a></li>
+                            <!-- <li><a href="#">V</a></li> -->
+                        </ul>
+                    </div>
                     <section id="effert1" class="effert">
                         <div class="effert__img effert1__img"></div>
-                        <div class="effert__text effert1__text">
-                            <h3>검색기능</h3>
-                            <ul>
-                                <li>키워드 검색:
-                                    <ul>
-                                        <li>사용자가 입력한 키워드에 따라 제품, 글, 또는 기타 콘텐츠를 검색.</li>
-                                    </ul>
-                                </li>
-                            </ul>
+                        <div class="text__box">
+                            <div class="effert__text effert1__text">
+                                <h3>검색기능</h3>
+                                <ul>
+                                    <li>키워드 검색:
+                                        <ul>
+                                            <li>사용자가 입력한 키워드에 따라 제품, 글, 또는 기타 콘텐츠를 검색.</li>
+                                        </ul>
+                                    </li>
+                                </ul>
+                            </div>
                             <div class="effert__btn effert1__btn"><a href="#">기능 보러가기</a></div>
                         </div>
                     </section>
