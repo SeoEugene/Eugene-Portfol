@@ -1,0 +1,12 @@
+/* title font */
+@font-face {
+    font-family: "Serifbabe Regular";
+    src: url("https://db.onlinewebfonts.com/t/5c81770605e6c58a0617ef5a5f47012f.eot");
+    src: url("https://db.onlinewebfonts.com/t/5c81770605e6c58a0617ef5a5f47012f.eot?#iefix")format("embedded-opentype"),
+        url("https://db.onlinewebfonts.com/t/5c81770605e6c58a0617ef5a5f47012f.woff2")format("woff2"),
+        url("https://db.onlinewebfonts.com/t/5c81770605e6c58a0617ef5a5f47012f.woff")format("woff"),
+        url("https://db.onlinewebfonts.com/t/5c81770605e6c58a0617ef5a5f47012f.ttf")format("truetype"),
+        url("https://db.onlinewebfonts.com/t/5c81770605e6c58a0617ef5a5f47012f.svg#Serifbabe Regular")format("svg");
+}
+
+@import url('https://fonts.googleapis.com/css2?family=Roboto+Slab:wght@100;200;300;400;500;600;700;800;900&display=swap');

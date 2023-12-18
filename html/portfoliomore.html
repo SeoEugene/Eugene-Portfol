@@ -4,7 +4,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Eugene</title>
+    <title>Document</title>
     <style>
         .top,
         .left,
@@ -37,8 +37,21 @@
         .fade-out {
             opacity: 0;
         }
+
+
+
+        .list__wrap {
+            opacity: 0;
+            transform: translateY(20px);
+        }
+
+        .list__wrap.active {
+            transition: opacity 5s ease, transform 5s ease;
+            opacity: 1;
+            transform: translateY(0);
+        }
     </style>
-    <link rel="stylesheet" href="assets/css/style.css">
+    <link rel="stylesheet" href="../assets/css/style.css">
 </head>
 
 <body>
@@ -49,11 +62,11 @@
             <div class="contact"><a href="#">contact</a></div>
         </div>
         <div class="left">
-            <div class="title home"><a href="/"><span></span>EuGene<span></span></a></div>
+            <div class="title home"><a href="/">EuGene<span></span></a></div>
             <nav class="nav">
                 <ul>
                     <li class="home"><a href="/">1. Home</a></li>
-                    <li><a href="html/portfoliolist.html">2. PortFolio</a>
+                    <li><a href="portfoliolist.html">2. PortFolio</a>
                         <ul>
                             <li>a. Find English</li>
                             <li>b. CinematicTable</li>
@@ -64,38 +77,82 @@
                             <li>g. Shaking carrots</li>
                         </ul>
                     </li>
-                    <li class="effert"><a href="html/effert.html">3. My Effect</a></li>
-                    <li class="about"><a href="html/about.html">4. About Me</a>
+                    <li class="effert"><a href="effert.html">3. My Effect</a></li>
+                    <li class="about"><a href="about.html">4. About Me</a>
                         <ul>
                             <li>a. about me</li>
                             <li>b. my skill</li>
                             <li>c. my plan</li>
                         </ul>
                     </li>
-                    <li class="contact"><a href="html/contact.html">5. Contact Me</a></li>
+                    <li class="contact"><a href="contact.html">5. Contact Me</a></li>
                 </ul>
             </nav>
         </div>
         <div class="content">
             <div class="cont-header">
-                <h2><span></span>home</h2>
+                <h2><span></span>PortFolio</h2>
             </div>
-            <div class="cont-conts">
-                <div class="circle1">
-                    <div class="circle1-1">
-                        <div class="circle1-1-1"></div>
-                    </div>
-                </div>
-                <div class="circle2">
-                    <div class="circle2-1">
-                        <div class="circle2-1-1">
-                            <div id="canvas"></div>
+
+
+            <div class="more__wrap">
+                <!-- <div class="list">
+                    <ul>
+                        <li class="active"><a href="#">I</a></li>
+                        <li><a href="#">II</a></li>
+                        <li><a href="#">III</a></li>
+                        <li><a href="#">IV</a></li>
+                        <li><a href="#">V</a></li>
+                        <li><a href="#">VI</a></li>
+                        <li><a href="#">VII</a></li>
+                        <li><a href="#">VIII</a></li>
+                    </ul>
+                </div> -->
+                <!-- list -->
+
+                <div class="more">
+                    <!-- <div class="more__period">Project period: 2023/11/10 ~ 11/24</div>
+                    <div class="small__desc">
+                        <p>HTML ㆍ SCSS ㆍ React.js</p>
+                        <p>Personal Project</p>
+                    </div> -->
+                    <div class="desc">
+                        <div class="more__title">Find English</div>
+                        <div class="img__box">
+                            <div>
+                                <div class="more__img"></div>
+                            </div>
+                            <div class="stack">
+                                <h3>Project </h3>
+                                <h3>Project period</h3>
+                                <p>2023/11/10 ~ 11/24</p>
+                                <h3>Using Stack</h3>
+                                <p>HTML, SCSS, React.js</p>
+                                <h3></h3>
+                            </div>
+                        </div>
+
+                        <div class="text">
+                            <bold>Youtube AIP를 이용한 영어 채널 추천 서비스 </bold><br />
+                            영어 콘텐츠를 소개하고, 자주 보는 vlog형식의 콘텐츠를 모아놓음으로 써 유튜브 검색 시간을 줄이고자 제작된 웹 서비스 입니다. <br />
+                            2n년간 영어에 관심은 많지만 늘지 않는 나를 위한 맞춤형 영어 추천 영상을 보여드립니다. <br />
+                            <br />
+                            Youtube API서비스를 이용해 검색, 채널 추천, 해당 채널로 바로가기, 채널 영상 보기 기능 제작 <br />
+                            React.js의 useEffect()메서드를 이용해 API 데이터를 가져오고 정제된 데이터를 보여주기<br />
+                        </div>
+                        <div class="button__box">
+                            <div class="go__github">프로젝트 자세히보기</div>
+                            <div class="go__service">서비스 바로가기</div>
                         </div>
                     </div>
+
+
                 </div>
+
             </div>
-            <div class="main_stiker__top"></div>
-            <div class="main_stiker__bottom"></div>
+            <!-- more__wrap -->
+
+
             <!-- <div class="cont-footer"></div> -->
         </div>
     </div>
@@ -103,12 +160,23 @@
 
     <script>
         document.addEventListener("DOMContentLoaded", () => {
+
             document.querySelector(".top").classList.remove("fade-out");
             document.querySelector(".left").classList.remove("fade-out");
             document.querySelector(".content").classList.remove("fade-out");
             document.querySelector(".top").classList.add("fade-in");
             document.querySelector(".left").classList.add("fade-in");
             document.querySelector(".content").classList.add("fade-in");
+
+
+
+            let fadeInElements = document.querySelectorAll('.list__wrap');
+
+            fadeInElements.forEach(function (element, index) {
+                setTimeout(function () {
+                    element.classList.add('active');
+                }, index * 5000);
+            });
         })
 
         document.querySelector(".title").addEventListener("click", () => {
@@ -121,7 +189,6 @@
             setTimeout(function () {
                 window.location.href = "/";
             }, 3000);
-
         })
 
         let navItems = document.querySelectorAll(".nav > ul > li");
@@ -144,6 +211,7 @@
             });
         });
     </script>
+
 
     <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/89/three.min.js"></script>
     <script id="vertexShader" type="x-shader/x-vertex">

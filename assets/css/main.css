@@ -44,16 +44,38 @@
     border-bottom: 1px solid #000;
     text-align: center;
     font-family: "PartizenoRegular";
-    font-size: 50px;
+    font-size: 40px;
     padding: 2vh 0;
     line-height: 1;
 }
 
-#section .left .title span {
-    font-family: 'Cara';
+#section .left .title span:first-child {
+    /* font-family: 'Cara'; */
     display: block;
-    font-size: 20px;
+    /* font-size: 20px; */
     line-height: 0.7;
+    background-image: url(../img/nav2.gif);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    width: 150px;
+    height: 10px;
+    margin: 0 auto;
+}
+
+#section .left .title span:last-child {
+    /* font-family: 'Cara'; */
+    display: block;
+    /* font-size: 20px; */
+    line-height: 0.7;
+    background-image: url(../img/nav5.gif);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    transform: scaleY(-1);
+    width: 150px;
+    height: 10px;
+    margin: 0 auto;
 }
 
 #section .left .nav {
@@ -92,6 +114,7 @@
 #section .content {
     width: calc(100% - 300px);
     height: calc(100vh - 70px);
+    position: relative;
 }
 
 #section .content .cont-header {
@@ -162,7 +185,8 @@
     left: 50%;
     top: 50%;
     transform: translate(-50%, -50%);
-    background-image: url(https://images.unsplash.com/photo-1541823709867-1b206113eafd?q=80&w=3414&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D);
+    /* background-image: url(https://images.unsplash.com/photo-1541823709867-1b206113eafd?q=80&w=3414&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D); */
+    background-image: url(../img/about9.jpg);
     background-size: cover;
 }
 
@@ -211,6 +235,25 @@
     top: 50%;
     transform: translate(-50%, -50%);
     overflow: hidden;
+}
+
+.main_stiker__top {
+    width: 50px;
+    height: 50px;
+    background-image: url(../img/btn2.gif);
+    position: absolute;
+    top: 0;
+    left: 50%;
+
+}
+
+.main_stiker__bottom {
+    width: 50px;
+    height: 50px;
+    background-image: url(../img/btn1.gif);
+    position: absolute;
+    bottom: 0;
+    left: 50%;
 }
 
 /* #section .content .cont-footer {

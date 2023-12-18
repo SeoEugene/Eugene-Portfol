@@ -13,21 +13,32 @@
 
 .effert__wrap .table {
     width: 100%;
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+
 }
 
 .effert__wrap .table>ul {
-    margin-top: 30px;
-    width: 100%;
-    display: flex;
+    margin-top: 50px;
+    width: 20%;
+    display: inline-flex;
     justify-content: center;
     align-items: center;
+    border: 2px solid #333;
+    border-radius: 30px;
+    background-color: #f3f0e7;
 }
 
 .effert__wrap .table>ul>li {
     padding: 0 20px;
     font-size: 30px;
     padding: 0 20px;
+    font-family: "Serifbabe Regular";
+}
 
+.effert__wrap .table>ul>li.active {
+    text-decoration: line-through;
 }
 
 .effert__wrap .page>section {

@@ -1,19 +1,42 @@
 .list__wrap {
     width: 200%;
+    height: 100%;
     display: flex;
     transition: transform 1s ease;
 }
 
 .list__wrap .page {
+    width: 100%;
+    height: 100%;
     flex: 1;
     display: flex;
+    flex-wrap: wrap;
     align-items: center;
     justify-content: center;
-    margin: 100px 0;
     position: relative;
+    align-content: center;
 }
 
-.list {
+.list__wrap .page h3 {
+    width: 15%;
+    height: 50px;
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 20px;
+    font-size: 30px;
+    font-family: "Serifbabe Regular";
+
+    border: 2px solid #333;
+    border-radius: 30px;
+    background-color: #f3f0e7;
+}
+
+.list__wrap .page>div {
+    display: flex;
+}
+
+.list__wrap .list {
     width: 300px;
     height: 500px;
     margin-bottom: 33px;
@@ -21,10 +44,10 @@
     background-color: #f3f0e7;
 }
 
-.list>div:nth-child(1),
-.list>div:nth-child(2),
-.list>div:nth-child(3),
-.list>div:nth-child(4) {
+.list__wrap .list>div:nth-child(1),
+.list__wrap .list>div:nth-child(2),
+.list__wrap .list>div:nth-child(3),
+.list__wrap .list>div:nth-child(4) {
     width: 100%;
     height: 42px;
     border: 1px solid #000;
@@ -33,16 +56,16 @@
     align-items: center;
 }
 
-.list>div:nth-child(1) {
+.list__wrap .list>div:nth-child(1) {
     border-bottom: 2px solid #000;
 }
 
-.list>div:nth-child(4) {
+.list__wrap .list>div:nth-child(4) {
     font-size: 14px;
     text-align: center;
 }
 
-.list>div:nth-child(5) {
+.list__wrap .list>div:nth-child(5) {
     width: 100%;
     height: 334px;
     border: 1px solid #000;
@@ -51,37 +74,26 @@
     align-items: center;
 }
 
-
-.list number {}
-
-.list name {}
-
-.list lan {}
-
-.list pro {}
-
-.list .img {}
-
-.img a {
+.list__wrap .img a {
     display: flex;
     width: 270px;
     height: 270px;
     border-radius: 50%;
 }
 
-.one .img a {
+.list__wrap .one .img a {
     background-image: url(../img/I.png);
 }
 
-.two .img a {
+.list__wrap .two .img a {
     background-image: url(../img/II.png);
 }
 
-.three .img a {
+.list__wrap .three .img a {
     background-image: url(../img/III.png);
 }
 
-.four .img a {
+.list__wrap .four .img a {
     background-image: url(../img/IV.png);
 }
 
