@@ -1,161 +1,154 @@
-.more__wrap {
-    width: 100%;
+.cont-conts.over {
+    height: 100%;
+    overflow-y: scroll;
 }
 
-.more__wrap .list {
-    width: 100%;
-    /* height: 50px; */
+.port__wrap {
     display: flex;
     flex-wrap: wrap;
-    justify-content: center;
-    align-items: center;
-}
-
-.more__wrap .list ul {
-    display: inline-flex;
-    justify-content: center;
-    align-items: center;
-    width: 38%;
-    height: 36px;
     justify-content: space-between;
-    font-family: "Serifbabe Regular";
-    border: 2px solid #333;
-    border-radius: 30px;
-    background-color: #f3f0e7;
-    padding: 15px 30px;
-}
-
-.more__wrap .list ul li.active a {
-    text-decoration: line-through;
-    text-decoration-thickness: 1px;
-}
-
-.more__wrap .list ul li a {
-    font-size: 30px;
-    padding: 5%;
-}
-
-.more__wrap .more {
     width: 100%;
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
-    align-items: center;
 }
 
-
-
-.more__wrap .desc {
-    width: 90%;
-    margin: 3%;
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
-    align-items: center;
-    align-content: center;
-    background-image: url(../img/page4.gif);
-    background-position: center;
-    background-size: cover;
-    background-repeat: no-repeat;
-}
-
-.more__title {
-    width: 100%;
-    height: 50px;
-    display: flex;
-    justify-content: center;
-    font-size: 2rem;
-    font-family: "Serifbabe Regular";
-    margin-top: 50px;
-}
-
-.more__wrap .more .more__img {
-    width: 300px;
-    height: 300px;
-    border-radius: 50%;
-    background-image: url(../img/more1.png);
-    background-position: center;
-    background-size: cover;
-}
-
-.img__box {
-    width: 100%;
-    display: flex;
-}
-
-.img__box>div {
-    width: 50%;
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
-    align-items: center;
-}
-
-.img__box>div:first-child {
-    justify-content: end;
-}
-
-.img__box .stack {
-    justify-content: start;
-    display: block;
-    font-family: 'Roboto Slab';
-    padding: 5%;
-}
-
-.img__box .stack h3 {
-    font-weight: 600;
-}
-
-.more__wrap .more .text {
-    width: 100%;
-    text-align: center;
-    margin-top: 30px;
-    line-height: 1.8;
-    font-family: 'Roboto Slab';
-}
-
-.more__wrap .more .more__desc bold {
-    font-size: 18px;
-    font-weight: 600;
-}
-
-.more__wrap .more .button__box {
-    width: 454px;
-    margin: 0 auto;
-    display: flex;
-    justify-content: space-between;
-    margin-top: 50px;
-    margin-bottom: 50px;
-}
-
-.more__wrap .more .button__box div {
-    width: 217px;
-    height: 55px;
+.port__wrap .port {
+    width: 32%;
+    height: 450px;
+    background-color: #F2F0E7;
     border: 1px solid #000;
-    border-radius: 30px;
+    margin-bottom: 2%;
+    overflow: hidden;
+}
+
+.port__wrap .port .num {
+    border-bottom: 1px solid #000;
+    display: block;
+    text-align: center;
+    padding: 10px;
+}
+
+.port__wrap .port .title {
+    border-bottom: 1px solid #000;
+    text-align: center;
+    font-family: 'Abel';
+    font-weight: bold;
+    padding: 5px;
+    background-color: #554c4c;
+    color: #fff;
+}
+
+.port__wrap .port .desc1 {
+    display: block;
+    border-bottom: 1px solid #000;
+    text-align: center;
+}
+
+.port__wrap .port .desc2 {
+    display: block;
+    border-bottom: 1px solid #000;
+    text-align: center;
+}
+
+.port__wrap .port .img {
+    width: 100%;
+    height: 100%;
+    background-image: url(https://images.unsplash.com/photo-1461749280684-dccba630e2f6?q=80&w=2938&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D);
+    background-size: cover;
+    background-position: center center;
+}
+
+.port__wrap .port:nth-child(2) .img {
+    background-image: url(https://images.unsplash.com/photo-1502945015378-0e284ca1a5be?q=80&w=3540&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D);
+}
+
+.port__wrap .port:nth-child(3) .img {
+    background-image: url(https://images.unsplash.com/photo-1499750310107-5fef28a66643?q=80&w=3540&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D);
+}
+
+.port__wrap .port:nth-child(4) .img {
+    background-image: url(https://images.unsplash.com/reserve/LJIZlzHgQ7WPSh5KVTCB_Typewriter.jpg?q=80&w=3396&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D);
+}
+
+.port__wrap .port:nth-child(5) .img {
+    background-image: url(https://images.unsplash.com/photo-1591013078076-42ae16047f45?q=80&w=3570&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D);
+}
+
+
+.more__wrap {}
+
+.port__view {
     display: flex;
     justify-content: center;
     align-items: center;
+    margin-top: 10px;
+    margin-bottom: 10px;
+    box-sizing: border-box;
+}
+
+.port__view .image {
+    width: 28vw;
+    height: 28vw;
+    background-color: #F2F0E7;
+    margin-top: 2vw;
+    background-image: url(https://images.unsplash.com/photo-1591013078076-42ae16047f45?q=80&w=3570&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D);
+    background-size: cover;
+}
+
+.port__view .text {
+    width: 35vw;
+    height: 33vw;
+    /* border: 1px solid #000; */
+    background-color: #F2F0E7;
+    margin-left: -4vw;
+    box-shadow: 0px 0px 20px #0000002d;
+}
+
+.port__view .text h3 {
+    border-bottom: 2px double #000;
+    font-family: "PartizenoRegular";
+    text-align: center;
+    line-height: 1;
+    padding: 10px;
+    font-size: 30px;
+}
+
+.port__view .text .desc {
+    padding: 20px;
+    overflow-y: scroll;
+    height: calc(100% - 60px);
+}
+
+.port__view .text span {
+    font-family: "Abel", "IropkeBatang";
+    display: block;
+}
+
+.port__view .text span em {
+    font-weight: bold;
+}
+
+.port__view .text p {
+    margin-top: 5px;
+    font-family: "Abel", "IropkeBatang";
+}
+
+.port__view .text p em {
+    font-weight: bold;
+
+}
+
+.port__view .text .btn {
+    text-align: center;
+}
+
+.port__view .text .btn a {
+    border: 1px double #000;
+    padding: 5px 40px;
+    border-radius: 50px;
+    display: inline-block;
+    background-color: #000;
+    color: #F2F0E7;
+    font-family: 'IropkeBatang';
+    margin-top: 20px;
+    margin-bottom: 30px;
     cursor: pointer;
-    background-color: #f3f0e7;
-
-}
-
-@media (max-width: 1100px) {
-    .more__wrap .list ul {
-        display: block;
-        width: 90%;
-        height: auto;
-        text-align: center;
-    }
-
-    .more__wrap .more .more__img,
-    .more__wrap .more .more__desc {
-        width: 90%;
-    }
-}
-
-.more__wrap .more .more__desc strong {
-    font-size: 18px;
-    font-weight: 500;
 }
