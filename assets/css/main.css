@@ -11,7 +11,7 @@
 
 #section .top {
     border-bottom: 1px solid #000;
-    height: 70px;
+    height: 80px;
     width: 100%;
     display: flex;
     align-items: center;
@@ -35,7 +35,7 @@
 #section .left {
     border-right: 1px solid #000;
     width: 300px;
-    height: 100vh;
+    height: calc(100vh - 70px);
     background-color: #F2F0E7;
     z-index: 1000;
 }
@@ -115,41 +115,12 @@
     width: calc(100% - 300px);
     height: calc(100vh - 70px);
     position: relative;
-
-}
-
-#section .content .cont-header {
-    text-align: center;
-    background-color: #F2F0E7;
-}
-
-#section .content .cont-header h2 {
-    font-family: "PartizenoRegular";
-    font-size: 34px;
-    line-height: 1;
-    padding: 2vh 0;
-    border-bottom: 1px solid #000;
-}
-
-#section .content .cont-header h2 span {
-    /* font-family: 'Cara'; */
-    display: block;
-    /* font-size: 20px; */
-    background-image: url(../img/crown.gif);
-    background-position: center;
-    background-repeat: no-repeat;
-    background-size: cover;
-    width: 100px;
-    height: 30px;
-    margin: 0 auto;
-    line-height: 0.7;
 }
 
 #section .content {
     display: flex;
     flex-direction: column;
     justify-content: space-between;
-    /* height: calc(100% - 70px); */
     background:
         radial-gradient(black 3px, transparent 4px),
         radial-gradient(black 3px, transparent 4px),
@@ -159,29 +130,68 @@
         #F2F0E7;
     background-size: 109px 109px, 109px 109px, 100% 6px, 109px 109px, 109px 109px;
     background-position: 54px 55px, 0px 0px, 0px 0px, 0px 0px, 0px 0px;
+}
 
+#section .content .cont-header {
+    width: 100%;
+    height: 100px;
+    text-align: center;
+    background-color: #F2F0E7;
+}
+
+#section .content .cont-header h2 {
+    width: 100%;
+    font-family: "PartizenoRegular";
+    font-size: 34px;
+    line-height: 1;
+    padding: 2vh 0;
+    border-bottom: 1px solid #000;
+}
+
+#section .content .cont-header h2 span {
+    display: block;
+    background-image: url(../img/crown.gif);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    width: 100px;
+    height: 26px;
+    margin: 0 auto;
+    line-height: 0.7;
 }
 
 #section .content .cont-conts {
+    width: 100%;
+    /* height: calc(100% - 240px); */
     display: flex;
     justify-content: center;
-    padding: 5%;
+    align-items: center;
+    /* padding: 2vw; */
+    border: 1px solid red;
+}
 
+#section .content .cont-conts .circle {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 2vw;
 }
 
 #section .content .cont-conts .circle1 {
-    width: 34vw;
-    height: 34vw;
+    width: 30vw;
+    height: 30vw;
     border: 1px solid #000;
     border-radius: 50%;
     margin-right: -2vw;
     background-color: #F2F0E7;
     position: relative;
+
 }
 
 #section .content .cont-conts .circle1 .circle1-1 {
-    width: 30vw;
-    height: 30vw;
+    width: 26vw;
+    height: 26vw;
     border: 1px solid #000;
     border-radius: 50%;
     position: absolute;
@@ -195,8 +205,8 @@
 }
 
 #section .content .cont-conts .circle1 .circle1-1 .circle1-1-1 {
-    width: 28vw;
-    height: 28vw;
+    width: 24vw;
+    height: 24vw;
     /* border: 1px solid #fff; */
     border-radius: 50%;
     position: absolute;
@@ -208,30 +218,30 @@
 }
 
 #section .content .cont-conts .circle2 {
-    width: 34vw;
-    height: 34vw;
+    width: 30vw;
+    height: 30vw;
     border: 1px solid #000;
     border-radius: 50%;
     margin-left: -2vw;
     background-color: #F2F0E7;
     position: relative;
+
 }
 
 #section .content .cont-conts .circle2 .circle2-1 {
-    width: 30vw;
-    height: 30vw;
+    width: 28vw;
+    height: 28vw;
     border: 1px solid #000;
     border-radius: 50%;
     position: absolute;
-
     left: 50%;
     top: 50%;
     transform: translate(-50%, -50%);
 }
 
 #section .content .cont-conts .circle2 .circle2-1 .circle2-1-1 {
-    width: 25vw;
-    height: 25vw;
+    width: 23vw;
+    height: 23vw;
     border: 1px solid #000;
     border-radius: 50%;
     position: absolute;
@@ -267,11 +277,17 @@
 } */
 
 #section .content .cont-footer {
-    height: 100px;
+    width: 100%;
+    height: 80px;
     border-top: 1px solid #000;
     background-color: #F2F0E7;
-
 }
+
+.pumping {
+    width: 50px;
+    height: 50px;
+}
+
 
 @media (max-width: 1000px) {
     #section .left {
@@ -289,6 +305,11 @@
     #section .content .cont-conts .circle1 {
         width: 50vw;
         height: 50vw;
+    }
+
+    #section .content .cont-conts .circle1 .circle1-1 {
+        width: 40vw;
+        height: 40vw;
     }
 
     #section .content .cont-conts .circle2 {

@@ -1,6 +1,14 @@
 .cont-conts.over {
     height: 100%;
     overflow-y: scroll;
+    margin-bottom: 2%;
+
+}
+
+.cont-conts.over::-webkit-scrollbar {
+    /* background-color: #888;
+    border-radius: 5px; */
+    width: 0px;
 }
 
 .port__wrap {
@@ -11,8 +19,8 @@
 }
 
 .port__wrap .port {
-    width: 32%;
-    height: 450px;
+    width: 30%;
+    height: 500px;
     background-color: #F2F0E7;
     border: 1px solid #000;
     margin-bottom: 2%;
@@ -111,22 +119,38 @@
     font-size: 30px;
 }
 
-.port__view .text .desc {
-    padding: 20px;
-    overflow-y: scroll;
-    height: calc(100% - 60px);
-}
-
-.port__view .text span {
+.port__view .text {
     font-family: "Abel", "IropkeBatang";
     display: block;
 }
 
-.port__view .text span em {
+.port__view .text .desc {
+    padding: 20px;
+    overflow-y: scroll;
+    height: calc(100% - 60px);
+
+}
+
+.port__view .text .desc::-webkit-scrollbar {
+    /* background-color: #888;
+    border-radius: 5px; */
+    width: 0px;
+}
+
+.port__view .text div {
+    padding: 1%;
+    margin-top: 5px;
+    border-top: 1px solid #000;
+}
+
+.port__view .text em {
+    padding-left: 5%;
     font-weight: bold;
+    font-size: 20px;
 }
 
 .port__view .text p {
+    padding: 0 10%;
     margin-top: 5px;
     font-family: "Abel", "IropkeBatang";
 }

@@ -1,0 +1,20 @@
+.cont-footer {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+
+.cont-footer>div {
+    width: 33.3333;
+    padding: 10px 30px;
+}
+
+.cont-footer .like {}
+
+.cont-footer .like .like__img {}
+
+.cont-footer .like .like__num {}
+
+.cont-footer .like .text {}
+
+.cont-footer .like .comment {}

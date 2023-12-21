@@ -1,290 +1,203 @@
 .about__wrap {
     width: 100%;
-    height: 100%;
-    position: relative;
-}
-
-.about__wrap>div {
-    display: none;
-}
-
-.sliderWrap>div:last-child {
-    display: block;
+    display: flex;
+    color: #333;
 }
 
 
-.about__wrap .page {
+#page {}
+
+#page>div {
     width: 100%;
-    height: 100%;
-    /* display: flex; */
-    position: relative;
+}
+
+bold {
+    width: 100%;
+    /* font-size: 18px; */
+    font-weight: 600;
+    border-bottom: 2px solid #333;
+    display: flex;
+}
+
+.page1 {
+    width: 24%;
+    background-color: #ccc7b2;
+    padding: 30px;
+    box-sizing: border-box;
+}
+
+.page1 bold {
+    /* margin: 3px 0; */
+}
+
+.page1 span {
+    display: block;
+    width: 100%;
+    text-align: right;
+}
+
+.page1 .image {
+    margin-bottom: 25px;
+    padding-bottom: 10px;
+
+}
+
+.page1 .image {
+    width: 250px;
+    height: 250px;
+    background-image: url(../img/about1.jpg);
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+
+.page1 .profile {
+    font-size: 22px;
+    margin-bottom: 20px;
+}
+
+.page2 {
+    width: 38%;
+    background-color: #F2F0E7;
+    padding: 30px;
+    box-sizing: border-box;
+    border-right: 2px dashed #ccc7b2;
+}
+
+.page2 bold {
+    margin-top: 20px;
+}
+
+.page2>div {
+    margin-bottom: 3px;
+    padding: 0 20px;
+    box-sizing: border-box;
+}
+
+.page2 .education {}
+
+.page2 .courses {
+    text-align: center;
+
+}
+
+.page2 .courses li {
+    display: flex;
+    justify-content: space-around;
+}
+
+.page2 .courses li>div:first-child {
+    width: 30%;
+
+}
+
+.page2 .courses li>div:last-child {
+    width: 70%;
+}
+
+.page2 .certificate {
+    text-align: center;
+
+}
+
+.page2 .certificate li {
+    display: flex;
+    justify-content: space-around;
+}
+
+.page2 .certificate li>div:first-child {
+    width: 30%;
+
+}
+
+.page2 .certificate li>div:last-child {
+    width: 70%;
+}
+
+.page2 .tools ul {
+    width: 100%;
+    display: flex;
+}
+
+.page2 .tools li {
+    width: 20%;
+    background-size: cover;
+    background-position: center;
+}
+
+.page3 {
+    width: 38%;
+    background-color: #F2F0E7;
+    padding: 30px;
+    box-sizing: border-box;
+}
+
+.page3 bold {
+    margin-top: 20px;
+}
+
+.page3 h3 {
+    font-weight: 600;
+}
+
+.page3>div {
+    margin-bottom: 3px;
+    padding: 0 20px;
+    box-sizing: border-box;
+}
+
+.page3 .skill ul {
+    margin-left: 20px;
+}
+
+.page3 .skill ul li {
+    padding: 1px 3px;
+}
+
+.page3 .skill li>div:first-child {
+    width: 28%;
+}
+
+.page3 .skill li>div:last-child {
+    width: 72%;
+}
+
+.page3 .skill li {
+    display: flex;
+    justify-content: space-between;
+}
+
+/* .page3 .skill .skill-progress {
+    position: absolute;
     top: 0;
     left: 0;
-}
-
-.about__wrap .page .text {
-    width: 90%;
-    /* height: 90%; */
-    position: absolute;
-    font-size: 35px;
-    line-height: 2.5;
-    z-index: 9997;
-
-}
-
-.about__wrap .page .image {
-    background-position: center;
-    background-size: cover;
-    z-index: 9998;
-}
-
-.about__wrap .page .aboutbtn {
-    width: 50px;
-    height: 50px;
-    position: absolute;
-    top: 50%;
-    transform: translateY(-50%);
-    right: 1%;
-    background-image: url(../img/btn3.gif);
-    background-position: center;
-    background-size: cover;
-    cursor: pointer;
-    z-index: 9999;
-}
-
-
-#page1 {
-    align-items: center;
-    justify-content: center;
-
-}
-
-#page1 .text {
-    width: 100%;
-    padding: 30px;
-    background-color: #d9d9d9;
-    top: 50%;
-    transform: translateY(-50%);
-}
-
-#page1 .text div {
-    padding-left: 20%;
-}
-
-#page1 .image {
-    position: absolute;
-    top: 50%;
-    right: 20%;
-    transform: translateY(-50%);
-    width: 30%;
-    height: 500px;
-    background-image: url(../img/about1.jpg);
-}
-
-#page2 {
-    align-items: center;
-    justify-content: center;
-}
-
-#page2 .text {
-    width: 90%;
-    padding: 30px;
-    background-color: #F2F0E7;
-    position: absolute;
-    top: 20%;
-    left: 50%;
-    transform: translateX(-50%);
-}
-
-#page2 .text>div {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    text-align: center;
-}
-
-#page2 .image__box {
-    width: 90%;
-    height: 200px;
-    position: absolute;
-    bottom: 10%;
-    left: 50%;
-    transform: translateX(-50%);
-    display: flex;
-    justify-content: center;
-}
-
-#page2 .image {
-    width: 150px;
-    height: 150px;
-    margin: 0 20px;
-    border-radius: 50%;
-
-}
-
-#page2 .image1 {
-    background-image: url(../img/about2.jpg);
-}
-
-#page2 .image2 {
-    background-image: url(../img/about3.jpg);
-}
-
-#page2 .image3 {
-    background-image: url(../img/about4.jpg);
-}
-
-#page3 {
-    justify-content: center;
-    align-items: center;
-}
-
-#page3 .text {
-    width: 90%;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-}
-
-#page4 {
-    justify-content: center;
-    align-items: center;
-}
-
-#page4 .text {
-    width: 90%;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-}
-
-#page5,
-#page6 {
     width: 100%;
     height: 100%;
-    /* display: flex; */
-    flex-wrap: wrap;
-    justify-content: center;
-    align-content: center;
-    align-items: center;
+    background-color: #e0e0e0;
+
+border-radius: 50%;
+clip: rect(0, 50%, 100%, 0);
+
+transform-origin: center;
 }
 
-#page5 h2,
-#page6 h2 {
-    width: 50%;
-    display: inline-flex;
-    justify-content: center;
-    align-items: center;
-    margin-bottom: 20px;
-    font-size: 30px;
-    font-family: "Serifbabe Regular";
-    border: 2px solid #333;
-    border-radius: 30px;
-    background-color: #f3f0e7;
+*/
+
+.skill-bar {
+    width: 300px;
+    /* 막대 바의 전체 너비 */
+    height: 20px;
+    /* 막대 바의 높이 */
+    background-color: #e0e0e0;
+    /* 막대 바의 기본 배경색 */
+    border-radius: 10px;
+    /* 막대 바의 모서리를 둥글게 설정 */
+    overflow: hidden;
+    /* 막대 바의 넘치는 부분을 숨김 */
 }
 
-#page5 .page5text {
-    width: 70%;
-    background-color: #F2F0E7;
-    margin: 0 auto;
-}
-
-.page5__wrap,
-.page6__wrap {
-    width: 80%;
-    padding: 20px;
-    background-color: #F2F0E7;
-    box-sizing: border-box;
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
-
-}
-
-.page5__wrap h3,
-.page6__wrap h3 {
-    width: 100%;
-    font-size: 26px;
-    border-bottom: 1px solid #333;
-    margin-bottom: 3%;
-    padding-bottom: 1%;
-}
-
-#page5 .box {
-    width: 100%;
-    font-size: 20px;
-    display: flex;
-    margin-bottom: 20px;
-}
-
-.box div:nth-child(1) {
-    width: 30%;
-    text-align: right;
-    padding-right: 30px;
-}
-
-.page5__wrap .box div:nth-child(1) {
-    border-right: 1px solid #333;
-
-}
-
-.box div:nth-child(2) {
-    width: 70%;
-    padding-left: 30px;
-}
-
-.box div ul li {
-    padding: 10px 0;
-}
-
-.vertical {
-    position: absolute;
-    content: '';
-    top: 0;
-    left: 10%;
-    width: 30px;
+.skill-progress {
     height: 100%;
-    background-color: #333;
-}
-
-#page6 {
-    width: 100%;
-    height: 100%;
-    /* display: flex; */
-    flex-wrap: wrap;
-    justify-content: center;
-    align-content: center;
-    align-items: center;
-}
-
-
-#page6 .page6__wrap .page6text {
-    width: 80%;
-    margin-top: 3%;
-    margin-bottom: 3%;
-}
-
-
-.page6text .box ul {
-    padding-left: 20%;
-}
-
-.page6text .box ul li {
-    border-left: 1px solid #333;
-    font-size: 20px;
-    margin-left: 30%;
-    padding-left: 6%;
-    padding-top: 8px;
-    position: relative;
-    text-align-last: left;
-}
-
-.page6text .box ul li::before {
-    position: absolute;
-    content: '';
-    width: 22px;
-    height: 22px;
-    border: 1px solid #333;
-    top: 33%;
-    left: -35%;
+    background-color: #ccc7b2;
+    /* 스킬과 역량을 표시하는 막대의 배경색 */
 }

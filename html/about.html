@@ -37,6 +37,19 @@
         .fade-out {
             opacity: 0;
         }
+
+
+
+        .list__wrap {
+            opacity: 0;
+            transform: translateY(20px);
+        }
+
+        .list__wrap.active {
+            transition: opacity 5s ease, transform 5s ease;
+            opacity: 1;
+            transform: translateY(0);
+        }
     </style>
     <link rel="stylesheet" href="../assets/css/style.css">
 </head>
@@ -46,253 +59,240 @@
     <div id="section">
         <div class="top">
             <div class="logo">Portfolio ASTRO PHOTOGRAPHY</div>
-            <div class="contact"><a href="#">contact</a></div>
+            <div class="contact"><a href="#">GitHub</a></div>
         </div>
         <div class="left">
-            <div class="title home"><a href="/">EuGene<span>M</span></a></div>
+            <div class="title home"><a href="/"><span></span>EuGene<span></span></a></div>
             <nav class="nav">
                 <ul>
-                    <li class="home"><a href="/">1. Home</a></li>
-                    <li><a href="portfoliolist.html">2. PortFolio</a>
+                    <li><a href="/">1. Home</a></li>
+                    <li><a href="../html/portfoliolist2.html">2. PortFolio</a>
                         <ul>
-                            <li>a. Find English</li>
-                            <li>b. CinematicTable</li>
-                            <li>c. Trend Device</li>
-                            <li>d. Recommend Book</li>
-                            <li>e. Diary with Chat GPT</li>
-                            <li>f. Rolling Paper with Friends</li>
-                            <li>g. Shaking carrots</li>
+                            <li><a href="../html/portfoliomore1.html">a. Find English</a></li>
+                            <li><a href="../html/portfoliomore2.html">b. CinematicTable</a></li>
+                            <li><a href="../html/portfoliomore3.html">c. Trend Device</a></li>
+                            <li><a href="../html/portfoliomore4.html">d. Joy Playground</a></li>
+                            <li><a href="../html/portfoliomore5.html">e. English Diary</a></li>
+                            <li><a href="../html/portfoliomore6.html">f. Rolling Paper with Friends</a></li>
+                            <li><a href="../html/portfoliomore7.html">g. Shaking carrots</a></li>
                         </ul>
                     </li>
-                    <li class="effert"><a href="effert.html">3. My Effect</a></li>
-                    <li class="about"><a href="about.html">4. About Me</a>
+                    <li><a href="../html/effert.html">3. My Effect</a></li>
+                    <li><a href="../html/about.html">4. About Me</a>
                         <ul>
-                            <li>a. about me</li>
-                            <li>b. my skill</li>
-                            <li>c. my plan</li>
+                            <li><a href="../html/aboutme.htm#Iml">a. I'm</a></li>
+                            <li><a href="../html/aboutme.html#skill">b. my skill</a></li>
+                            <li><a href="../html/aboutme.html#plan">c. my plan</a></li>
                         </ul>
                     </li>
-                    <li class="contact"><a href="contact.html">5. Contact Me</a></li>
+
+                    <li><a href="../html/contact.html">5. Contact</a></li>
                 </ul>
             </nav>
         </div>
         <div class="content">
             <div class="cont-header">
-                <h2><span></span>about</h2>
+                <h2><span></span>PortFolio</h2>
             </div>
+
 
             <div class="about__wrap">
-
-                <div class="page" id="page1">
-                    <div class="text">
-                        <div class="text1">
-                            Hello, there <Br />
-                            I'm Eugene.
-                        </div>
-                    </div>
-
-                    <div class="image image1"></div>
-                    <div class="aboutbtn"></div>
-                </div>
-                <!-- page1 -->
-
-                <div class="page" id="page2">
-                    <div class="text">
-                        <div class="text1"> I am a developer<Br />
-                            who seeks new experiences<Br />
-                            and prefers to break away from mundane routines. </div>
-                    </div>
-                    <div class="image__box">
-                        <div class="image image1"></div>
-                        <div class="image image2"></div>
-                        <div class="image image3"></div>
-                    </div>
-                    <div class="aboutbtn"></div>
-                </div>
-                <!-- page2 -->
-
-                <div class="page" id="page3">
-                    <div class="text">
-                        <div class="text1">
-                            I constantly strive to explore new things<Br />
-                            and see the world from various perspectives.
-                        </div>
-                    </div>
+                <div class="page1" id="page">
                     <div class="image"></div>
-                    <div class="aboutbtn"></div>
-                </div>
-                <!-- page3 -->
-
-                <div class="page" id="page4">
-                    <div class="text">
-                        <div class="text1">
-                            I value collaboration<Br />
-                            and want to grow in a free environment that respects individuality.
-                        </div>
+                    <div class="profile">
+                        <bold>Profile</bold>
                     </div>
-                    <div class="image"></div>
-                    <div class="aboutbtn"></div>
-                </div>
-                <!-- page4 -->
-
-                <div class="page" id="page5">
-                    <h2>Completed courses & Certificate</h2>
-                    <div class="page5__wrap">
-                        <div class="page5text" id="text1">
-                            <h3>Completed courses</h3>
-                            <div class="box">
-                                <div>
-                                    <ul>
-                                        <li>2023-09-04 - 2024-02-19</li>
-                                        <li>2021-02-16 - 2021-07-29</li>
-                                    </ul>
-                                </div>
-                                <div>
-                                    <ul>
-                                        <li>(산대특)_공공데이터를 활용한 Node.js, Java 전문가_양성_육성</li>
-                                        <li>(빅데이터 전문가)자바 파이썬을 활용한 머신러닝 개발자 양성과정 A</li>
-                                    </ul>
-                                </div>
-                            </div>
-                        </div>
-
-                        <div class="page5text" id="text2">
-                            <h3>Certificate</h3>
-                            <div class="box">
-                                <div>
-                                    <ul>
-                                        <li></li>
-                                        <li></li>
-                                        <li></li>
-                                        <li></li>
-                                    </ul>
-                                </div>
-                                <div>
-                                    <ul>
-                                        <li>정보처리 산업기사</li>
-                                        <li>웹 디자인 기능사</li>
-                                        <li>SQL 개발자(SQLD)</li>
-                                        <li>리눅스 마스터 2급</li>
-                                    </ul>
-                                </div>
-                            </div>
-                        </div>
+                    <div class="name">
+                        <bold>Name</bold><span>Seo Eugene</span>
                     </div>
-                    <div class="aboutbtn"></div>
-                    <div class="vertical"></div>
-                </div>
-                <!-- page5 -->
-
-                <div class="page" id="page6">
-                    <h2>Development Stack</h2>
-                    <div class="page6__wrap">
-                        <div class="page6text" id="text1">
-                            <h3>Front-end</h3>
-                            <div class="box">
-
-                                <div>
-                                    <ul>
-                                        <li>React.js</li>
-                                        <li>Vue.js</li>
-                                        <li>Vite.js</li>
-                                    </ul>
-
-                                </div>
-                            </div>
-                        </div>
-
-                        <div class="page6text" id="text2">
-                            <h3>Back-end</h3>
-                            <div class="box">
-
-                                <div>
-                                    <ul>
-                                        <li>PHP</li>
-                                        <li>Node.js</li>
-                                        <li>Next.js</li>
-                                    </ul>
-                                </div>
-
-                            </div>
-                        </div>
+                    <div class="age">
+                        <bold>Age</bold><span>1997.03.22(26)</span>
                     </div>
-
-                    <div class="aboutbtn"></div>
+                    <div class="age">
+                        <bold>Adress</bold><span>경기도 안산시</span>
+                    </div>
+                    <div class="personality">
+                        <bold>Personality</bold><span></span>
+                    </div>
                 </div>
-                <!-- page6 -->
+                <div class="page2" id="page">
+                    <div class="education">
+                        <bold>Education</bold><br />
+                        2021 안산대학교 졸업 (IT응용보안 전공, 2년제)<br />
+                        2016 경일 관광 고등학교 졸업 (금융정보 전공)<br />
+                    </div>
+                    <div class="courses">
+                        <bold>Completed courses</bold><br />
+                        <ul>
+                            <li>
+                                <div>기간</div>
+                                <div>이수과정</div>
+                            </li>
+                            <li>
+                                <div>2023/09/04 - 2024/02/19</div>
+                                <div>(산대특)_공공데이터를 활용한 Node.js, Java 전문가_양성_육성</div>
+                            </li>
+                            <li>
+                                <div>2021/02/16 - 2021/07/29</div>
+                                <div>(빅데이터 전문가)자바 파이썬을 활용한 머신러닝 개발자 양성과정 A</div>
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="certificate">
+                        <bold>Certificate</bold><br />
+                        <ul>
+                            <li>
+                                <div>취득일</div>
+                                <div>자격증명</div>
+                            </li>
+                            <li>
+                                <div>2021</div>
+                                <div>정보처리 산업기사</div>
+                            </li>
+                            <li>
+                                <div>2023</div>
+                                <div>웹 디자인 기능사</div>
+                            </li>
+                            <li>
+                                <div>2021</div>
+                                <div>SQL 개발자(SQLD)</div>
+                            </li>
+                            <li>
+                                <div>2021</div>
+                                <div>리눅스 마스터 2급</div>
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="tools">
+                        <bold>Tools</bold><br />
+                        <ul>
+                            <li><img width="60" height="60" src="https://img.icons8.com/ios-glyphs/60/visual-studio.png"
+                                    alt="visual-studio" /></li>
+                            <li><img width="60" height="60" src="https://img.icons8.com/ios-glyphs/60/github.png"
+                                    alt="github" />
+                            </li>
+
+                            <li><img width="60" height="60" src="https://img.icons8.com/fluency/60/figma.png"
+                                    alt="figma" /></li>
+                            <li><img width="60" height="60" src="https://img.icons8.com/ios-filled/60/notion.png"
+                                    alt="notion" /></li>
+                            <li><img width="60" height="60" src="https://img.icons8.com/color/60/firebase.png"
+                                    alt="firebase" /></li>
+                            <li><img width="60" height="60"
+                                    src="https://img.icons8.com/external-tal-revivo-color-tal-revivo/60/external-postman-is-the-only-complete-api-development-environment-logo-color-tal-revivo.png"
+                                    alt="external-postman-is-the-only-complete-api-development-environment-logo-color-tal-revivo" />
+                            </li>
+                            <li><img width="60" height="60" src="https://img.icons8.com/ios-filled/60/java-eclipse.png"
+                                    alt="java-eclipse" /></li>
+                            <li>
+                                <img width="60" height="60" src="https://img.icons8.com/color/60/pycharm--v2.png"
+                                    alt="pycharm--v2" />
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="page3" id="page">
+                    <div class="skill">
+                        <bold>Skill</bold><br />
+                        <h3>Back-end</h3>
+                        <ul>
+                            <li>
+                                <div>Node.js</div>
+                                <div class="skill-bar">
+                                    <div class="skill-progress" style="width: 80%;"></div>
+                                </div>
+                            </li>
+                            <li>
+                                <div>Next.js</div>
+                                <div class="skill-bar">
+                                    <div class="skill-progress" style="width: 60%;"></div>
+                                </div>
+                            </li>
+                            <li>
+                                <div>PHP</div>
+                                <div class="skill-bar">
+                                    <div class="skill-progress" style="width: 80%;"></div>
+                                </div>
+                            </li>
+                            <li>
+                                <div>Spring</div>
+                                <div class="skill-bar">
+                                    <div class="skill-progress" style="width: 50%;"></div>
+                                </div>
+                            </li>
+                            <li>
+                                <div>Python</div>
+                                <div class="skill-bar">
+                                    <div class="skill-progress" style="width: 50%;"></div>
+                                </div>
+                            </li>
+                        </ul>
+                        <h3>Front-end</h3>
+                        <ul>
+                            <li>
+                                <div>React.js</div>
+                                <div class="skill-bar">
+                                    <div class="skill-progress" style="width: 60%;"></div>
+                                </div>
+                            </li>
+                            <li>
+                                <div>Vue.js</div>
+                                <div class="skill-bar">
+                                    <div class="skill-progress" style="width: 50%;"></div>
+                                </div>
+                            </li>
+                            <li>
+                                <div>Vite.js</div>
+                                <div class="skill-bar">
+                                    <div class="skill-progress" style="width: 50%;"></div>
+                                </div>
+                            </li>
+                            <li>
+                                <div>javascript/jQuery</div>
+                                <div class="skill-bar">
+                                    <div class="skill-progress" style="width: 80%;"></div>
+                                </div>
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="like">
+                        <bold>Like</bold><br />
+                        I like doing ballet, and learning new things<br />
+                        and I enjoy making people happy.
+                    </div>
+                    <div class="specialty">
+                        <bold>specialty</bold><br />
+
+                    </div>
+                </div>
+            </div>
+
+
+            <div class="cont-footer">
+                <div class="like">
+                    <div class="pumping" data-text="♡"></div>
+                    <div class="like__num"></div>
+                </div>
+                <div class="text">
+                    Please leave a review and comment to give me encouragement.
+                </div>
+
+                <div class="comment">comment</div>
 
             </div>
-            <!-- about__wrap -->
 
 
-            <!-- <div class="cont-footer"></div> -->
+
         </div>
-    </div>
-    <!-- //section -->
-
-    <script>
-        document.addEventListener("DOMContentLoaded", () => {
-
-            document.querySelector(".top").classList.remove("fade-out");
-            document.querySelector(".left").classList.remove("fade-out");
-            document.querySelector(".content").classList.remove("fade-out");
-            document.querySelector(".top").classList.add("fade-in");
-            document.querySelector(".left").classList.add("fade-in");
-            document.querySelector(".content").classList.add("fade-in");
-
-
-
-            let fadeInElements = document.querySelectorAll('.list__wrap');
-
-            fadeInElements.forEach(function (element, index) {
-                setTimeout(function () {
-                    element.classList.add('active');
-                }, index * 5000);
-            });
-        })
-
-        document.querySelector(".title").addEventListener("click", () => {
-            event.preventDefault();
-
-            document.querySelector(".top").classList.add("fade-out");
-            document.querySelector(".left").classList.add("fade-out");
-            document.querySelector(".content").classList.add("fade-out");
-
-            setTimeout(function () {
-                window.location.href = "/";
-            }, 3000);
-        })
-
-        let navItems = document.querySelectorAll(".nav > ul > li");
-
-        navItems.forEach(function (navItem) {
-            navItem.addEventListener("click", function (event) {
-                event.preventDefault();
-
-                let linkElement = navItem.querySelector("a");
-
-                if (linkElement) {
-                    document.querySelector(".top").classList.add("fade-out");
-                    document.querySelector(".left").classList.add("fade-out");
-                    document.querySelector(".content").classList.add("fade-out");
-
-                    setTimeout(function () {
-                        window.location.href = linkElement.getAttribute("href");
-                    }, 3000);
-                }
-            });
-        });
-    </script>
-
-
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/89/three.min.js"></script>
-    <script id="vertexShader" type="x-shader/x-vertex">
+        <!-- //section -->
+        <script src="../assets/script/nav.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/89/three.min.js"></script>
+        <script id="vertexShader" type="x-shader/x-vertex">
         void main() {
             gl_Position = vec4( position, 1.0 );
         }
     </script>
-
-    <script id="fragmentShader" type="x-shader/x-fragment">
+        <script id="fragmentShader" type="x-shader/x-fragment">
         #ifdef GL_ES
             precision mediump float;
             #endif
@@ -335,72 +335,70 @@
             gl_FragColor = vec4(color, 1.);
         }
     </script>
-    <script>
-        var container;
-        var camera, scene, renderer;
-        var uniforms;
+        <script>
+            var container;
+            var camera, scene, renderer;
+            var uniforms;
 
-        init();
-        animate();
+            init();
+            animate();
 
-        function init() {
-            container = document.getElementById('canvas');
+            function init() {
+                container = document.getElementById('canvas');
 
-            camera = new THREE.Camera();
-            camera.position.z = 1;
-            scene = new THREE.Scene();
+                camera = new THREE.Camera();
+                camera.position.z = 1;
+                scene = new THREE.Scene();
 
-            var geometry = new THREE.PlaneBufferGeometry(2, 2);
+                var geometry = new THREE.PlaneBufferGeometry(2, 2);
 
-            uniforms = {
-                time: {
-                    type: "f",
-                    value: 1.0
-                },
-                resolution: {
-                    type: "v2",
-                    value: new THREE.Vector2()
-                }
-            };
+                uniforms = {
+                    time: {
+                        type: "f",
+                        value: 1.0
+                    },
+                    resolution: {
+                        type: "v2",
+                        value: new THREE.Vector2()
+                    }
+                };
 
-            var material = new THREE.ShaderMaterial({
-                uniforms: uniforms,
-                vertexShader: document.getElementById('vertexShader').textContent,
-                fragmentShader: document.getElementById('fragmentShader').textContent
-            });
+                var material = new THREE.ShaderMaterial({
+                    uniforms: uniforms,
+                    vertexShader: document.getElementById('vertexShader').textContent,
+                    fragmentShader: document.getElementById('fragmentShader').textContent
+                });
 
-            var mesh = new THREE.Mesh(geometry, material);
-            scene.add(mesh);
+                var mesh = new THREE.Mesh(geometry, material);
+                scene.add(mesh);
 
-            renderer = new THREE.WebGLRenderer({
-                alpha: true
-            });
-            renderer.setPixelRatio(window.devicePixelRatio);
+                renderer = new THREE.WebGLRenderer({
+                    alpha: true
+                });
+                renderer.setPixelRatio(window.devicePixelRatio);
 
-            container.appendChild(renderer.domElement);
+                container.appendChild(renderer.domElement);
 
-            onWindowResize();
-            window.addEventListener('resize', onWindowResize, false);
-        }
+                onWindowResize();
+                window.addEventListener('resize', onWindowResize, false);
+            }
 
-        function onWindowResize(event) {
-            renderer.setSize(window.innerWidth, window.innerHeight);
-            uniforms.resolution.value.x = renderer.domElement.width;
-            uniforms.resolution.value.y = renderer.domElement.height;
-        }
+            function onWindowResize(event) {
+                renderer.setSize(window.innerWidth, window.innerHeight);
+                uniforms.resolution.value.x = renderer.domElement.width;
+                uniforms.resolution.value.y = renderer.domElement.height;
+            }
 
-        function animate() {
-            requestAnimationFrame(animate);
-            render();
-        }
+            function animate() {
+                requestAnimationFrame(animate);
+                render();
+            }
 
-        function render() {
-            uniforms.time.value += 0.05;
-            renderer.render(scene, camera);
-        }
-    </script>
-
-
+            function render() {
+                uniforms.time.value += 0.05;
+                renderer.render(scene, camera);
+            }
+        </script>
 </body>
 
 </html>
