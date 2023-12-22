@@ -1,21 +1,24 @@
 .cont-conts.over {
-    height: 100%;
-    overflow-y: scroll;
-    margin-bottom: 2%;
-
+    /* height: 100%; */
 }
 
-.cont-conts.over::-webkit-scrollbar {
-    /* background-color: #888;
-    border-radius: 5px; */
-    width: 0px;
-}
+
 
 .port__wrap {
     display: flex;
     flex-wrap: wrap;
     justify-content: space-between;
     width: 100%;
+    height: calc(100vh - 240px);
+    padding: 2vw;
+    box-sizing: border-box;
+    overflow-y: scroll;
+}
+
+.port__wrap::-webkit-scrollbar {
+    /* background-color: #888;
+    border-radius: 5px; */
+    width: 0px;
 }
 
 .port__wrap .port {
@@ -23,8 +26,10 @@
     height: 500px;
     background-color: #F2F0E7;
     border: 1px solid #000;
-    margin-bottom: 2%;
     overflow: hidden;
+    margin-bottom: 20px;
+    box-sizing: border-box;
+
 }
 
 .port__wrap .port .num {
@@ -59,49 +64,82 @@
 .port__wrap .port .img {
     width: 100%;
     height: 100%;
-    background-image: url(https://images.unsplash.com/photo-1461749280684-dccba630e2f6?q=80&w=2938&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D);
     background-size: cover;
     background-position: center center;
 }
 
+.port__wrap .port:nth-child(1) .img {
+    background-image: url(../img/FindEnglish.jpg);
+}
+
 .port__wrap .port:nth-child(2) .img {
-    background-image: url(https://images.unsplash.com/photo-1502945015378-0e284ca1a5be?q=80&w=3540&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D);
+    background-image: url(../img//Cinematic.jpg);
 }
 
 .port__wrap .port:nth-child(3) .img {
-    background-image: url(https://images.unsplash.com/photo-1499750310107-5fef28a66643?q=80&w=3540&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D);
+    background-image: url(../img/TrendDevice.jpg);
 }
 
 .port__wrap .port:nth-child(4) .img {
-    background-image: url(https://images.unsplash.com/reserve/LJIZlzHgQ7WPSh5KVTCB_Typewriter.jpg?q=80&w=3396&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D);
+    background-image: url(../img/JoyPlayground.jpg);
 }
 
 .port__wrap .port:nth-child(5) .img {
-    background-image: url(https://images.unsplash.com/photo-1591013078076-42ae16047f45?q=80&w=3570&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D);
+    background-image: url(../img/EnglishDiary.jpg);
+}
+
+.port__wrap .port:nth-child(6) .img {
+    background-image: url(../img/RollingPaper.jpg);
 }
 
 
-.more__wrap {}
+.more__wrap {
+    width: 100%;
+    height: calc(100vh - 240px);
+    border: 1px solid red;
+}
 
-.port__view {
+.more__wrap {
+
     display: flex;
     justify-content: center;
     align-items: center;
     margin-top: 10px;
     margin-bottom: 10px;
     box-sizing: border-box;
+    position: relative;
 }
 
-.port__view .image {
+.more__wrap .imgframe {
     width: 28vw;
-    height: 28vw;
+    height: 30vw;
+    background-color: #fff;
+    position: absolute;
+    top: 50%;
+    left: 33%;
+    transform: translateY(-50%);
+    transform: rotate(5deg);
+}
+
+.more__wrap .image {
+    width: 24vw;
+    height: 23vw;
     background-color: #F2F0E7;
     margin-top: 2vw;
-    background-image: url(https://images.unsplash.com/photo-1591013078076-42ae16047f45?q=80&w=3570&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D);
     background-size: cover;
+    background-position: center;
+    position: absolute;
+    top: 5px;
+    left: 50%;
+    transform: translateX(-50%);
 }
 
-.port__view .text {
+.more__wrap .img1 {
+    background-image: url(../img/FindEnglish.jpg);
+
+}
+
+.more__wrap .text {
     width: 35vw;
     height: 33vw;
     /* border: 1px solid #000; */
@@ -110,7 +148,7 @@
     box-shadow: 0px 0px 20px #0000002d;
 }
 
-.port__view .text h3 {
+.port__vimore__wrapew .text h3 {
     border-bottom: 2px double #000;
     font-family: "PartizenoRegular";
     text-align: center;
@@ -119,7 +157,7 @@
     font-size: 30px;
 }
 
-.port__view .text {
+.more__wrap .text {
     font-family: "Abel", "IropkeBatang";
     display: block;
 }
@@ -131,31 +169,31 @@
 
 }
 
-.port__view .text .desc::-webkit-scrollbar {
+.more__wrap .text .desc::-webkit-scrollbar {
     /* background-color: #888;
     border-radius: 5px; */
     width: 0px;
 }
 
-.port__view .text div {
+.more__wrap .text div {
     padding: 1%;
     margin-top: 5px;
     border-top: 1px solid #000;
 }
 
-.port__view .text em {
+.more__wrap .text em {
     padding-left: 5%;
     font-weight: bold;
     font-size: 20px;
 }
 
-.port__view .text p {
+.more__wrap .text p {
     padding: 0 10%;
     margin-top: 5px;
     font-family: "Abel", "IropkeBatang";
 }
 
-.port__view .text p em {
+.more__wrap .text p em {
     font-weight: bold;
 
 }
@@ -164,7 +202,7 @@
     text-align: center;
 }
 
-.port__view .text .btn a {
+.more__wrap .text .btn a {
     border: 1px double #000;
     padding: 5px 40px;
     border-radius: 50px;

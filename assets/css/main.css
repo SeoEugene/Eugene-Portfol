@@ -162,16 +162,15 @@
 
 #section .content .cont-conts {
     width: 100%;
-    /* height: calc(100% - 240px); */
     display: flex;
     justify-content: center;
     align-items: center;
     /* padding: 2vw; */
-    border: 1px solid red;
 }
 
 #section .content .cont-conts .circle {
     width: 100%;
+    height: calc(100vh - 240px);
     display: flex;
     justify-content: center;
     align-items: center;
